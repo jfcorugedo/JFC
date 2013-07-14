@@ -26,19 +26,26 @@
         <class>com.inmueblesypersonas.model.User</class>
         
         <properties>
-        <!-- Use these for MySQL -->
+        <!-- Use these for MySQL - ->
             <property name="javax.persistence.jdbc.driver"   value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url"      value="jdbc:mysql://localhost/test"/>
             <property name="javax.persistence.jdbc.user"     value="root"/>
             <property name="javax.persistence.jdbc.password" value="test.mysql"/>
-        
+        -->
             
-        <!-- Use these for derby - ->
+       <!-- Derby in-memory database (for testing) - ->
             <property name="javax.persistence.jdbc.driver"   value="org.apache.derby.jdbc.EmbeddedDriver"/>
-            <property name="javax.persistence.jdbc.url"      value="jdbc:derby:memory:OpenBooks;create=true"/>
+            <property name="javax.persistence.jdbc.url"      value="jdbc:derby:memory:test;create=true"/>
             <property name="javax.persistence.jdbc.user"     value=""/>
             <property name="javax.persistence.jdbc.password" value=""/>
-		-->
+       -->
+       
+       		<property name="openjpa.jdbc.DBDictionary" value="hsql" />
+	        <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+	        <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:test" />
+	        <property name="javax.persistence.jdbc.user" value="sa" />
+	        <property name="javax.persistence.jdbc.password" value="" />
+           
 
             <property name="openjpa.DataCache"                value="true"/>        
             <property name="openjpa.RemoteCommitProvider"     value="sjvm"/>
@@ -50,6 +57,10 @@
             <!-- Esta propiedad crea el schema en la bbdd -->
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(SchemaAction='drop,add,deleteTableContents',ForeignKeys=true)"/>
             <property name="openjpa.jdbc.QuerySQLCache"       value="true(EnableStatistics=true)"/>
+            
+            <!-- Trazas activas en OpenJPA -->
+            <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
+            <property name="openjpa.ConnectionFactoryProperties" value="PrintParameters=true" />
             
         </properties>
     </persistence-unit>
