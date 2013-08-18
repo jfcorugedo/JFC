@@ -17,9 +17,9 @@ import org.slf4j.LoggerFactory;
 public class StringUtils {
 
 	/** Default encoding that will be used if no other encoding is specified */
-	public static String DEFAULT_ENCODING = "UTF-8";
+	public static final String DEFAULT_ENCODING = "UTF-8";
 	
-	private static Logger LOGGER = LoggerFactory.getLogger(StringUtils.class);
+	private static Logger logger = LoggerFactory.getLogger(StringUtils.class);
 	
 	public String toSH1(String convertme) throws StringTransformationException{
 		return toSH1(convertme, DEFAULT_ENCODING);
@@ -34,20 +34,20 @@ public class StringUtils {
 	 */
 	public String toSH1(String convertme, String charset) throws StringTransformationException{
 		try{
-			if(LOGGER.isDebugEnabled()) {
-				LOGGER.debug("Obtaining the SHA1 digest object...");
+			if(logger.isDebugEnabled()) {
+				logger.debug("Obtaining the SHA1 digest object...");
 			}
 			MessageDigest sha1Digest = MessageDigest.getInstance("SHA-1");
-			if(LOGGER.isDebugEnabled()) {
-				LOGGER.debug("Generating the SHA1 representation of the given text ("+charset+"): " + convertme);
+			if(logger.isDebugEnabled()) {
+				logger.debug("Generating the SHA1 representation of the given text ("+charset+"): " + convertme);
 			}
 			byte[] sha1Result = sha1Digest.digest(convertme.getBytes(charset));
-			if(LOGGER.isDebugEnabled()) {
-				LOGGER.debug("Obtaining the hexadecimal representation of the SHA1 output obtained previously");
+			if(logger.isDebugEnabled()) {
+				logger.debug("Obtaining the hexadecimal representation of the SHA1 output obtained previously");
 			}
 			String hexRepresentation = toHexString(sha1Result);
-			if(LOGGER.isDebugEnabled()) {
-				LOGGER.debug("Hexadecimal representation of the SHA1 content obtained: " + hexRepresentation);
+			if(logger.isDebugEnabled()) {
+				logger.debug("Hexadecimal representation of the SHA1 content obtained: " + hexRepresentation);
 			}
 			return hexRepresentation;
 		}catch(Exception e){
