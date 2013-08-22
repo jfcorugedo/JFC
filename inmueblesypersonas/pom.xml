@@ -17,8 +17,8 @@
 	<name>InmueblesPersonasApp</name>
 
 	<modules>
-		<module>persistence-model</module>
-		<module>commons-util</module>
+		<module>iyp-persistence-model</module>
+		<module>iyp-commons-util</module>
 	</modules>
 
 	<build>
