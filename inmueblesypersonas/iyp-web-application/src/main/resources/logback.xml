@@ -9,6 +9,8 @@
   
   <logger name="com.inmueblesypersonas" level="TRACE"/>
   
+  <logger name="org.springframework" level="INFO"/>
+  
 
   <root level="debug">
     <appender-ref ref="STDOUT" />

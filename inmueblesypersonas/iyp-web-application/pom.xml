@@ -12,15 +12,70 @@
 	<artifactId>iyp-web-application</artifactId>
 	<packaging>war</packaging>
 	<name>iyp-web-application</name>
+	
+	<properties>
+		<java-version>1.6</java-version>
+		<org.springframework-version>3.2.3.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<ch.qos.logback-version>1.0.13</ch.qos.logback-version>
+	</properties>
 
 	<dependencies>
+	
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				 </exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+				
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${org.aspectj-version}</version>
+		</dependency>	
+		
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${ch.qos.logback-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-
+				
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -39,24 +94,15 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
-		<!-- Spring webflow -->
-		<dependency>
-			<groupId>org.springframework.webflow</groupId>
-			<artifactId>spring-webflow</artifactId>
-			<version>2.3.2.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
 		
+		<!-- Apache -->
+		<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
