@@ -8,10 +8,6 @@
             <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
             <property name="eclipselink.ddl-generation.output-mode" value="database"/>
             <property name="eclipselink.weaving" value="static"/>
-            <!-- Trazas habilitadas para un fichero distinto - ->
-            <property name="eclipselink.logging.file" value="output.log"/ -->
-            <property name="eclipselink.logging.level.sql" value="FINE"/>
-			<property name="eclipselink.logging.parameters" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>

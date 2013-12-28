@@ -1,0 +1,16 @@
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2013-12-27 17:53:14
+project --topLevelPackage com.iyp.model --projectName iyp-persistence-model
+jpa setup --database H2_IN_MEMORY --provider ECLIPSELINK
+entity jpa --class ~.Role --testAutomatically --activeRecord true --table ROLE --identifierColumn ROLE_ID --permitReservedWords
+field string --fieldName name --column NAME --unique
+finder add --finderName findRolesByNameEquals
+entity jpa --class ~.User --testAutomatically --activeRecord true --table USER --identifierColumn USER_ID --permitReservedWords
+field string --fieldName email --column EMAIL --unique --notNull
+field string --fieldName password --column PASSWORD --notNull
+finder add --finderName findUsersByEmailEquals
+entity jpa --class ~.Card --testAutomatically --activeRecord true --table CARD --identifierColumn CARD_ID
+field date --fieldName scheduledDate --column SCHEDULED_DATE --notNull --type java.util.Date --dateTimeFormatPattern dd/MM/yyyy
+field number --fieldName price --column PRICE --type java.lang.Long
+field reference --type ~.User --fieldName user --cardinality MANY_TO_ONE --permitReservedWords
+focus --class ~.User
+field set --type ~.Card --fieldName cards --cardinality ONE_TO_MANY --mappedBy user
