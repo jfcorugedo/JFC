@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_myhome_model_Card" modelAttribute="card" path="/cards" versionField="Version" z="fQu8g6PWSGBzPcHI8CO3+rysOV0=">
+        <field:datetime dateTimePattern="${card_scheduleddate_date_format}" field="scheduledDate" id="c_com_myhome_model_Card_scheduledDate" required="true" z="FkNtVloj9HzI5L0YuGnmPP8IuR8="/>
+        <field:input field="price" id="c_com_myhome_model_Card_price" validationMessageCode="field_invalid_integer" z="eizypzaEakatqtMqo1DAOdD9jb8="/>
+        <field:select field="user" id="c_com_myhome_model_Card_user" itemValue="id" items="${users}" path="/users" z="Tp0xx2XP1Mztx3KaTMeqBqSjQMw="/>
+        <field:select field="cardType" id="c_com_myhome_model_Card_cardType" itemValue="id" items="${cardtypes}" path="/cardtypes" z="cHxJ+dRsk0MyY0yZ5u2o321twZo="/>
+        <field:simple field="attributes" id="c_com_myhome_model_Card_attributes" messageCode="entity_reference_not_managed" messageCodeAttribute="Attribute" z="OXlfPtQi/aq1sYjwcPP9hd34eTU="/>
+    </form:update>
+</div>

@@ -1,0 +1,42 @@
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2013-12-29 15:54:13
+project --topLevelPackage com.myhome --projectName myhome-web
+jpa setup --database H2_IN_MEMORY --provider ECLIPSELINK
+entity jpa --class ~.model.Role --testAutomatically --activeRecord true --table ROLE --identifierColumn ROLE_ID --permitReservedWords
+finder add --finderName findRolesByNameEquals
+field string --fieldName name --column NAME --unique
+finder add --finderName findRolesByNameEquals
+entity jpa --class ~.model.User --testAutomatically --activeRecord true --table USER --identifierColumn USER_ID --permitReservedWords
+field string --fieldName email --column EMAIL --unique --notNull
+field string --fieldName password --column PASSWORD --notNull
+finder add --finderName findUsersByEmailEquals
+entity jpa --class ~.model.Card --testAutomatically --activeRecord true --table CARD --identifierColumn CARD_ID
+field date --fieldName scheduledDate --column SCHEDULED_DATE --notNull --type java.util.Date --dateTimeFormatPattern dd/MM/yyyy
+field number --fieldName price --column PRICE --type java.lang.Long
+field reference --type ~.model.User --fieldName user --cardinality MANY_TO_ONE --permitReservedWords
+focus --class ~.model.User
+field set --type ~.model.Card --fieldName cards --cardinality ONE_TO_MANY --mappedBy user
+entity jpa --class ~.model.CardType --testAutomatically --activeRecord true --table CARD_TYPE --identifierColumn TYPE --identifierType java.lang.String
+// [failed] focus --class ~.Card
+// [failed] field reference --type ~.model.CardType --fieldName cardType --cardinality MANY_TO_ONE
+focus --class ~.model.Card
+field reference --type ~.model.CardType --fieldName cardType --cardinality MANY_TO_ONE
+finder add --finderName findCardsByCardType
+entity jpa --class ~.model.Attribute --testAutomatically --activeRecord true --table ATTRIBUTE --identifierColumn ATTRIBUTE_ID
+field string --fieldName name --column NAME
+field string --fieldName value --column VALUE --permitReservedWords
+// [failed] field reference --type ~.Card --fieldName card --cardinality MANY_TO_ONE
+field reference --type ~.model.Card --fieldName card --cardinality MANY_TO_ONE
+ focus --class ~.model.Card
+// [failed] field set --type ~.Attribute --fieldName attributes --cardinality ONE_TO_MANY --mappedBy card
+field set --type ~.model.Attribute --fieldName attributes --cardinality ONE_TO_MANY --mappedBy card
+service all --interfacePackage ~.service
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.controller
+web mvc setup
+web mvc all --package ~.controller
+perform clean
+perform test
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2013-12-29 16:41:14
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myhome_model_Card" object="${card}" path="/cards" z="uDxyk9P33bRAGtI/l16uqY/cHdo=">
+        <field:display date="true" dateTimePattern="${card_scheduleddate_date_format}" field="scheduledDate" id="s_com_myhome_model_Card_scheduledDate" object="${card}" z="9hhyYTe6/FD0lEWdFyn58FCAodA="/>
+        <field:display field="price" id="s_com_myhome_model_Card_price" object="${card}" z="Lf2k0o0kApqqqu6QphTAMBBkuLQ="/>
+        <field:display field="user" id="s_com_myhome_model_Card_user" object="${card}" z="vf1qPPoMvWj6Mmix+x/sVtfo5TQ="/>
+        <field:display field="cardType" id="s_com_myhome_model_Card_cardType" object="${card}" z="Z0WwG0i8cKxeP2tcKmXJjCO2/x4="/>
+    </page:show>
+</div>

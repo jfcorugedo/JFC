@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_card" z="j9iy3PDWy+M3ajHoRHeVvQK38Ic=">
+            <menu:item id="i_card_new" messageCode="global_menu_new" url="/cards?form" z="HnX6WO2gXiGwDI4yZBEgcPY3V5w="/>
+            <menu:item id="i_card_list" messageCode="global_menu_list" url="/cards?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2BtnOpQF+yaD8dAIfbCuOD7pZD8="/>
+        </menu:category>
+        <menu:category id="c_user" z="uoTSf/uIZ821ZppidzS9aO776yk=">
+            <menu:item id="i_user_new" messageCode="global_menu_new" url="/users?form" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
+            <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
+        </menu:category>
+        <menu:category id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=">
+            <menu:item id="i_role_new" messageCode="global_menu_new" url="/roles?form" z="WNB2HvnzvtbOA3r7qL1gqrUOq8g="/>
+            <menu:item id="i_role_list" messageCode="global_menu_list" url="/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DVFtqj4xcHbEiJh6bgI7Tyre3ec="/>
+        </menu:category>
+        <menu:category id="c_attribute" z="g7NCMKPLsKNhzEFdDVPp3H4tpMY=">
+            <menu:item id="i_attribute_new" messageCode="global_menu_new" url="/attributes?form" z="066+BnW7znTYFWafvBVsH07Xc0I="/>
+            <menu:item id="i_attribute_list" messageCode="global_menu_list" url="/attributes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4wv7iOGZ7YmzOheEDQ0XhS6Wa9I="/>
+        </menu:category>
+    </menu:menu>
+</div>

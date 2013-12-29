@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myhome_model_Attribute" object="${attribute}" path="/attributes" z="v6+dEA1bhQS6HEp62ODsFTX+tPY=">
+        <field:display field="name" id="s_com_myhome_model_Attribute_name" object="${attribute}" z="g+7HAi9pgdSYd/oCZt9KOkiUkz8="/>
+        <field:display field="value" id="s_com_myhome_model_Attribute_value" object="${attribute}" z="5xLnD7S5MzyazyNuZhytGaUWdwU="/>
+        <field:display field="card" id="s_com_myhome_model_Attribute_card" object="${attribute}" z="Yl6VvTAl7l93ti9ax3+96DjG0HU="/>
+    </page:show>
+</div>
