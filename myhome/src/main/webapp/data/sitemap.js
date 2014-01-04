@@ -1,0 +1,27 @@
+﻿var sitemap = 
+{
+"rootNodes":[
+{
+"pageName":"Home",
+"type":"Wireframe",
+"url":"Home.html"},
+{
+"pageName":"Fichas_Todas_Prev",
+"type":"Wireframe",
+"url":"Fichas_Todas_Prev.html"},
+{
+"pageName":"Alta_Ficha_01",
+"type":"Wireframe",
+"url":"Alta_Ficha_01.html"},
+{
+"pageName":"Alta_Ficha_02",
+"type":"Wireframe",
+"url":"Alta_Ficha_02.html"},
+{
+"pageName":"Alta_Ficha_03",
+"type":"Wireframe",
+"url":"Alta_Ficha_03.html"},
+{
+"pageName":"Alta_Ficha_04",
+"type":"Wireframe",
+"url":"Alta_Ficha_04.html"}]};

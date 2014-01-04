@@ -19,5 +19,8 @@
             <menu:item id="i_attribute_new" messageCode="global_menu_new" url="/attributes?form" z="066+BnW7znTYFWafvBVsH07Xc0I="/>
             <menu:item id="i_attribute_list" messageCode="global_menu_list" url="/attributes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4wv7iOGZ7YmzOheEDQ0XhS6Wa9I="/>
         </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__homeindex_id" messageCode="global_generic" url="/home/index" z="RdkJRXBjwI2iuen0Vi10ZBIeuWk="/>
+        </menu:category>
     </menu:menu>
 </div>
